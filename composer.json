@@ -19,12 +19,12 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "laravel-zero/framework": "^9.2",
-        "nunomaduro/termwind": "^1.14"
+        "php": "^8.0"
     },
     "require-dev": {
+        "nunomaduro/termwind": "^1.14",
         "laravel/pint": "^1.2",
+        "laravel-zero/framework": "^9.2",
         "mockery/mockery": "^1.4.4",
         "pestphp/pest": "^1.21.3"
     },
