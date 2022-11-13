@@ -30,7 +30,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
@@ -42,13 +44,14 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0.2"
+        },
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "bin": [
-        "pakiti"
-    ]
+    "bin": ["builds/pakiti"]
 }
