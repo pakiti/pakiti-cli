@@ -12,7 +12,7 @@ class NewCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'new {name=Artisan}';
+    protected $signature = 'new {type=php-package}';
 
     /**
      * The description of the command.
