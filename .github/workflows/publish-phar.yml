@@ -6,7 +6,7 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     name: Release PHAR
 
@@ -21,14 +21,10 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.0
-          extensions: dom, curl, libxml, mbstring, zip
-          ini-values: error_reporting=E_ALL
-          tools: composer:v2
-          coverage: none
+          php-version: 8.1
 
       - name: Install the dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer install
 
       - name: Create the PHAR file.
         run: ./pakiti app:build pakiti.phar --build-version=${{ steps.tag.outputs.tag }}
